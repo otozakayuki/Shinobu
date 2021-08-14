@@ -8,7 +8,7 @@ module.exports = {
 	description: 'Get Fresh anime Images :D',
 	run: async (client, message, args) => {
 		if (!message.channel.nsfw) {
-			return message.reply('請用在適合的地方');
+			return message.reply('請用在nsfw的频道');
 		} else {
 			const nsfw = randomanime.nsfw();
 			const embed = new MessageEmbed().setImage(nsfw).setColor('RANDOM');
